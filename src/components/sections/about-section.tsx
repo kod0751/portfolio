@@ -40,12 +40,6 @@ export function AboutSection() {
                 새로운 기술을 배우고 적용하는 것을 즐깁니다.
               </p>
               <div className="flex flex-wrap gap-3 pt-2">
-                <Button variant="default" asChild>
-                  <a href="/resume.pdf" download>
-                    <Download className="size-4 mr-2" />
-                    이력서 다운로드
-                  </a>
-                </Button>
                 <Button variant="outline" size="icon" asChild>
                   <a
                     href="https://github.com"
