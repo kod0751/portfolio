@@ -1,17 +1,8 @@
 "use client";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 const contactInfo = [
@@ -38,53 +29,7 @@ export function ContactSection() {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-        <Card className="lg:col-span-3">
-          <CardHeader>
-            <CardTitle className="text-xl flex items-center gap-2">
-              <Send className="size-5 text-primary" />
-              메시지 보내기
-            </CardTitle>
-            <CardDescription>
-              궁금한 점이 있으시면 언제든 연락주세요
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">이름</Label>
-                  <Input id="name" placeholder="홍길동" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">이메일</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="hello@example.com"
-                  />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="subject">제목</Label>
-                <Input id="subject" placeholder="문의 제목을 입력하세요" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">메시지</Label>
-                <Textarea
-                  id="message"
-                  placeholder="메시지를 입력하세요..."
-                  rows={5}
-                />
-              </div>
-              <Button type="submit" className="w-full">
-                <Send className="size-4 mr-2" />
-                메시지 보내기
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-
-        <div className="lg:col-span-2 space-y-4">
+        <div className="lg:col-span-5 space-y-4">
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="text-lg">연락처 정보</CardTitle>
