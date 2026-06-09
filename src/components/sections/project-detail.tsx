@@ -127,16 +127,6 @@ export function ProjectDetail({ project, onBack }: ProjectDetailProps) {
           )}
         </div>
 
-        {/* 상태 메시지 */}
-        {project.statusMessage && (
-          <div className="flex items-start gap-3 p-4 rounded-lg bg-amber-500/10 border border-amber-500/20">
-            <AlertTriangle className="size-5 text-amber-500 shrink-0 mt-0.5" />
-            <p className="text-sm text-amber-700 dark:text-amber-400">
-              {project.statusMessage}
-            </p>
-          </div>
-        )}
-
         {/* 수상 내역 */}
         {project.awards && project.awards.length > 0 && (
           <Card className="border-amber-500/20 bg-linear-to-br from-amber-500/5 to-transparent">
