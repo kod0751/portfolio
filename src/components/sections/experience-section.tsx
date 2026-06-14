@@ -6,31 +6,30 @@ import { Briefcase, GraduationCap, Award } from "lucide-react";
 
 const experiences = [
   {
-    type: "work",
-    title: "프론트엔드 개발 인턴",
-    company: "ABC 테크",
-    period: "2024.01 - 2024.06",
+    type: "education",
+    title: "부트캠프 수료",
+    company: "프론트엔드 웹 데브코스",
+    period: "2024.07 - 2024.12",
     description:
-      "React와 TypeScript를 활용한 웹 애플리케이션 개발. 컴포넌트 라이브러리 구축 및 성능 최적화 작업 참여.",
-    tags: ["React", "TypeScript", "Storybook"],
-  },
-  {
-    type: "project",
-    title: "웹 개발 프로젝트",
-    company: "대학교 캡스톤",
-    period: "2023.09 - 2023.12",
-    description:
-      "팀 프로젝트로 헬스케어 플랫폼 개발. 프론트엔드 리드로 참여하여 UI/UX 설계 및 구현 담당.",
-    tags: ["Next.js", "Tailwind CSS", "Figma"],
+      "HTML5/CSS3 웹 표준 및 JavaScript(ES6+) 비동기 프로그래밍 기초 확립, React 프레임워크 기반의 컴포넌트 중심 설계 및 상태 관리 라이브러리 활용",
+    tags: ["React", "TypeScript", "Javascript", "HTML", "CSS", "Git", "OPENAI"],
   },
   {
     type: "education",
     title: "부트캠프 수료",
-    company: "프론트엔드 스쿨",
-    period: "2023.03 - 2023.08",
+    company: "휴먼교육센터",
+    period: "2025.11 - 2026.02",
     description:
-      "6개월 집중 교육 과정. JavaScript 기초부터 React, Node.js까지 풀스택 웹 개발 학습.",
-    tags: ["JavaScript", "React", "Node.js"],
+      " Python 기반의 데이터 전처리 및 Numpy, Pandas를 활용한 데이터 분석/시각화 기초 확립, TensorFlow 기반의 머신러닝/딥러닝 모델 개발 및 데이터 플랫폼 파이프라인 활용",
+    tags: [
+      "Python",
+      "PostgreSQL",
+      "MySQL",
+      "Tableau",
+      "JAVA",
+      "데이터분석",
+      "AI",
+    ],
   },
 ];
 
@@ -70,9 +69,18 @@ export function ExperienceSection() {
                         {exp.period}
                       </Badge>
                     </div>
-                    <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                      {exp.description}
-                    </p>
+                    <ul className="list-disc list-inside space-y-1.5 text-muted-foreground text-sm mb-4">
+                      {exp.description.split(",").map((sentence, sIndex) => {
+                        const trimmedSentence = sentence.trim();
+                        if (!trimmedSentence) return null;
+
+                        return (
+                          <li key={sIndex} className="pl-1 -indent-5 ml-5">
+                            {trimmedSentence}
+                          </li>
+                        );
+                      })}
+                    </ul>
                     <div className="flex flex-wrap gap-2">
                       {exp.tags.map((tag) => (
                         <Badge
