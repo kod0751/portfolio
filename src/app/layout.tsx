@@ -1,18 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-
-const geistSans = Geist({
-  subsets: ["latin"],
-  variable: "--font-geist-sans",
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-geist-mono",
-});
 
 export const metadata: Metadata = {
   title: "Portfolio | Frontend Developer",
@@ -50,11 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="ko"
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable}`}
-    >
+    <html lang="ko" suppressHydrationWarning>
       <body className="font-sans antialiased bg-background">
         <ThemeProvider
           attribute="class"
