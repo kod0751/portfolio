@@ -15,7 +15,6 @@ import {
   Calendar,
   Users,
   Trophy,
-  AlertTriangle,
   Lightbulb,
   CheckCircle2,
 } from "lucide-react";
