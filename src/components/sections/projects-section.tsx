@@ -36,7 +36,7 @@ export function ProjectsSection({ onProjectClick }: ProjectsSectionProps) {
             <div className="flex items-start justify-between gap-3">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors font-bold">
                     {project.title}
                   </CardTitle>
                   {project.awards && project.awards.length > 0 && (

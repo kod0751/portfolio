@@ -3,28 +3,33 @@
 @import "shadcn/tailwind.css";
 
 @font-face {
-  font-family: "NanumSquareNeoLight";
+  font-family: "NanumSquareNeo";
   src: url("../app/fonts/NanumSquareNeo-aLt.ttf");
+  font-weight: 300;
 }
 
 @font-face {
   font-family: "NanumSquareNeo";
   src: url("../app/fonts/NanumSquareNeo-bRg.ttf");
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "NanumSquareNeoBold";
+  font-family: "NanumSquareNeo";
   src: url("../app/fonts/NanumSquareNeo-cBd.ttf");
+  font-weight: 700;
 }
 
 @font-face {
-  font-family: "NanumSquareNeoExtraBold";
+  font-family: "NanumSquareNeo";
   src: url("../app/fonts/NanumSquareNeo-dEb.ttf");
+  font-weight: 800;
 }
 
 @font-face {
-  font-family: "NanumSquareNeoHeavy";
+  font-family: "NanumSquareNeo";
   src: url("../app/fonts/NanumSquareNeo-eHv.ttf");
+  font-weight: 900;
 }
 
 @custom-variant dark (&:is(.dark, .dark *));
