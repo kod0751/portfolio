@@ -9,16 +9,15 @@ const contactInfo = [
   {
     icon: Mail,
     label: "이메일",
-    value: "hello@example.com",
+    value: "kod07510@google.com",
     href: "mailto:hello@example.com",
   },
   {
     icon: Phone,
     label: "전화번호",
-    value: "010-1234-5678",
-    href: "tel:010-1234-5678",
+    value: "010-8564-9561",
   },
-  { icon: MapPin, label: "위치", value: "서울, 대한민국", href: null },
+  { icon: MapPin, label: "위치", value: "광주, 대한민국", href: null },
 ];
 
 const socialLinks = [
@@ -54,7 +53,6 @@ export function ContactSection() {
                 return item.href ? (
                   <a
                     key={item.label}
-                    href={item.href}
                     className="block hover:opacity-80 transition-opacity"
                   >
                     {content}
